@@ -1,0 +1,116 @@
+:root {
+    --bg-color: #1a1a2e;
+    --snake-color: #00ff88;
+    --snake-head-color: #00b361;
+    --food-color: #ff2e63;
+    --text-color: #e94560;
+    --font-main: 'Orbitron', sans-serif;
+    --canvas-bg: #16213e;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: #fff;
+    font-family: var(--font-main);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.game-container {
+    text-align: center;
+    width: 100%;
+    max-width: 600px;
+}
+
+header h1 {
+    font-size: 2rem;
+    color: var(--snake-color);
+    text-shadow: 0 0 10px var(--snake-color);
+    margin-bottom: 1rem;
+}
+
+header h1 span {
+    color: #fff;
+}
+
+.score-board {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    color: var(--snake-color);
+}
+
+.canvas-wrapper {
+    position: relative;
+    border: 5px solid var(--snake-color);
+    box-shadow: 0 0 20px var(--snake-color);
+    margin: 0 auto;
+    width: 400px;
+    height: 400px;
+}
+
+#game-canvas {
+    background-color: var(--canvas-bg);
+    display: block;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(26, 26, 46, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.overlay.hidden {
+    display: none;
+}
+
+.overlay-content h2 {
+    color: var(--text-color);
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+}
+
+.overlay-content p {
+    margin-bottom: 2rem;
+    color: #fff;
+}
+
+button {
+    background: transparent;
+    border: 2px solid var(--snake-color);
+    color: var(--snake-color);
+    padding: 0.8rem 1.5rem;
+    font-size: 1.2rem;
+    font-family: var(--font-main);
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+button:hover {
+    background: var(--snake-color);
+    color: var(--bg-color);
+    box-shadow: 0 0 15px var(--snake-color);
+}
+
+footer {
+    margin-top: 2rem;
+    color: #888;
+    font-size: 0.9rem;
+}
